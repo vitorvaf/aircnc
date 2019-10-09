@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import './styles.css';
-import { from } from 'rxjs';
+
 
 export default function Dashboard(){
     const [spots, setSpots] = useState([]);
@@ -16,9 +16,10 @@ export default function Dashboard(){
             });
 
            setSpots(response.data);
-        }
-        console.log(data);
+           console.log(response.data)
+        }        
         loadSpots();
+        
 
     }, []);
 
